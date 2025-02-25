@@ -14,9 +14,9 @@
 # Load needed modules
 module load samtools
 module load bedtools
-
-INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt)
-OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)
+### Keep the lists below with the same number of samples
+INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt)  ### list of realigned bam files -- the final files
+OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)  ### list of output names (just extract from input names removing suffix)
 
 # dump depth of coverage at every position in the genome
 samtools depth -aa $INPUT > $OUTPUT\.depth
