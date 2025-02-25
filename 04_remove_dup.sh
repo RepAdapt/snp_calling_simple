@@ -6,7 +6,7 @@
 #SBATCH --array=1-83
 
 
-### The lists below need to follow the same order of samples
+### The lists below need to follow the same order
 INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### list of input bam files (output of script 03)
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ### list of output names --  I usually just remove the suffix (.bam) to extract the name from the input, and then the command below will add _dedup.bam 
 
