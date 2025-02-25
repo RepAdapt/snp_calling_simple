@@ -5,6 +5,8 @@
 #SBATCH --account=def-yeaman
 #SBATCH --array=1-83
 
+
+#### All this lists below need to have same order of samples
 INPUT1=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### List of trimmed R1 reads (produced with script 01)
 INPUT2=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ###  List of trimmed R2 reads (produced with script 01)
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt) ### List of output name -- just extract the meaningful part of the name from the reads names
