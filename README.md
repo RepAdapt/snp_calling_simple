@@ -13,7 +13,9 @@ NOTES:
 The resources requested for each script (CPUs, RAM and run time) should be changed according to your data: size of your raw fastq, size of reference etc. The resources provided are an indication and probably an overkill in some steps.
 Indel realignment (script 07) needs a bit more RAM than the rest of the scripts.
 
-The pipeline uses as example a B. platyphylla dataset, which had 83 samples -- hence why the job arrays in the various scripts are of size 83. Change according to your samples number or libraries number and also according to your CPU availability.
+The pipeline uses as example a B. platyphylla dataset, which had 83 samples -- hence why the job arrays in the various scripts are of size 83. Change according to your samples number or libraries number. Mind the job number limit of your HPC!!!
+
+
 This pipeline speeds the process by launching a single job with minimal resources and run time per sample, allowing to process all or most samples in parallel, depending on CPUs availability. 
 Remember to adjust resources to your needs to improve q times with job schedulers.
 
