@@ -5,6 +5,7 @@
 #SBATCH --account=def-yeaman
 #SBATCH --array=1-83
 
+### Keep the lists below with the same order of samples
 INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### List of input deduplicated bam files
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ### List of output names (just remove .bam) from the inputs
 NAME=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt)   ### Here you want to extract the sample name from the input name, which is used to set the read IDs. Can be the same as list2
