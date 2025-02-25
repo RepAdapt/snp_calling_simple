@@ -8,6 +8,8 @@
 
 module load bcftools
 
+### concatenate all the chromsome vcf produced in 09. list.txt is a list of the vcfs produced in 09.
+### here we concatenate them in a single vcf
 
-bcftools concat -f list.txt -Oz > spruce_banff.vcf.gz
-tabix -p vcf spruce_banff.vcf.gz
+bcftools concat -f list.txt -Oz > bplaty_banff.vcf.gz
+tabix -p vcf bplaty_banff.vcf.gz
