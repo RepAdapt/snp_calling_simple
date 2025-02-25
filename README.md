@@ -25,4 +25,4 @@ Remember to adjust resources to your needs to improve q times with job scheduler
 This pipeline assumes that each sample has a single pair of paired end reads. 
 
 
-If your dataset has multiple libraries per sample(multiple pairs of fastq per sample), you can use this pipeline but you need to merge the multiple resulting bams per sample into a single final sorted bam per sample before calling SNPs (before script 09). Remember to re-sort them after merging them.
+If your dataset has multiple libraries per sample (multiple pairs of fastq per sample), you can use this pipeline but you need to merge the multiple resulting bams per sample into a single final sorted bam per sample before calling SNPs (before script 09). Remember to re-sort them after merging them.
