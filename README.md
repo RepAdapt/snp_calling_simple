@@ -21,6 +21,7 @@ Remember to adjust resources to your needs to improve q times with job scheduler
 
 
 ######### IMPORTANT 
+
 This pipeline assumes that each sample has a pair of paired end reads. 
 
 
