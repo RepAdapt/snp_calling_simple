@@ -13,6 +13,6 @@ OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ### list of output names --
 module load picard java
 
 
-### Here we remove duplicates. We feed it a bam, and we get a deduplicated bam per sample.
+### Here we remove duplicates. We feed it a bam, and we get a deduplicated bam per sample/library
 
 java -jar $EBROOTPICARD/picard.jar MarkDuplicates INPUT=$INPUT OUTPUT=$OUTPUT\_dedup.bam METRICS_FILE=$INPUT\_DUP_metrics.txt VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true
