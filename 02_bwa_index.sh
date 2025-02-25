@@ -10,4 +10,4 @@
 module load bwa 
 
 
-bwa index -a bwtsw Betula_pendula_subsp._pendula.faa
+bwa index -a bwtsw Betula_pendula_subsp._pendula.fa
