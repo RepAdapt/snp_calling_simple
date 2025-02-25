@@ -17,6 +17,9 @@ CHROM=$(sed -n "${SLURM_ARRAY_TASK_ID}p" chromosomes.txt) ### list of chromosome
 #### So you can for example split 1000 scaffolds names into 10 lists of 100 scaffolds each, and feed those 10 lists to the command using a job array of size 10 (1-10) -- one list of scaffolds per job
 
 
-### Here we call SNPs. list.txt is a list of ALL the realigned bam files of ALL samples. If you have multiple bam per samples due to multiple libraries, merge them into one bam per sample before this step. ploidymap is a list that keeps the same order of samples in list.txt and should use the sample ID names you set in script 05, and for each
+### Here we call SNPs. list.txt is a list of ALL the realigned bam files of ALL samples. 
+
+### If you have multiple bam per samples due to multiple libraries, merge them into one bam per sample before this step. ploidymap is a list that keeps the same order of samples in list.txt and should use the sample ID names you set in script 05, and for each
+
 ### sample ID name has the ploidy -- for a diploid species just create a tab separated file with 2 columns (first column: sample ID name set in script 05, second columnd: 2)
 bcftools mpileup -Ou -f Betula_pendula_subsp._pendula.fa --bam-list list.txt -q 5 -r $CHROM -I -a FMT/AD | bcftools call -S ploidymap.txt -G - -f GQ -mv -Ov > $CHROM\.vcf
