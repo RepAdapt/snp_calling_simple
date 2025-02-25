@@ -5,11 +5,12 @@
 #SBATCH --account=def-yeaman
 #SBATCH --array=1-83
 
-INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt)
-OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)
+INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### list of input bam files (output of script 03)
+OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ### list of output names --  I usually just remove the suffix (.bam) to extract the name from the input, and then the command below will add _dedup.bam 
 
 module load picard java
 
 
+### here we remove duplicates. We feed it a bam, and we get a deduplicated bam.
 
 java -jar $EBROOTPICARD/picard.jar MarkDuplicates INPUT=$INPUT OUTPUT=$OUTPUT\_dedup.bam METRICS_FILE=$INPUT\_DUP_metrics.txt VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true
