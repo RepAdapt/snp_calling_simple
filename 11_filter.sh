@@ -8,9 +8,10 @@
 
 module load vcftools bcftools
 module load StdEnv/2020 intel/2020.1.217 tabix/0.2.6
+########### TO BE UPDATED with chosen filtering criteria 
 ### Filter the final VCF produced in script 10 -- no MAF filter
 
-
+#################### This filtering is just an example, they are not the chosen criteria -- to be updated ###########
 bcftools filter -e 'MQ < 30' bplaty.vcf.gz -Oz > tmp.vcf.gz
 
 vcftools --gzvcf tmp.vcf.gz --max-missing 0.7 --minQ 30 --minGQ 20 --minDP 5 --max-alleles 2 --recode --recode-INFO-all --stdout > bplaty_filtered.vcf
