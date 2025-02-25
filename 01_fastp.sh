@@ -6,7 +6,7 @@
 #SBATCH --array=1-83
 
 
-### THESE FILES NEED TO FOLLOW THE SAME SAMPLE ORDER
+### THESE LISTS NEED TO FOLLOW THE SAME SAMPLE ORDER
 INPUT1=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt)  ### A list of your R1 fastq files
 INPUT2=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)  ### A list of your R2 fastq files
 OUTPUT1=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt) ### A list of R1 output names -- I usually just capture the meaningful part of the fastq names including R1 (just remove the fq.gz or fq suffix)
