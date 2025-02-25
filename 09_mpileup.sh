@@ -21,7 +21,9 @@ CHROM=$(sed -n "${SLURM_ARRAY_TASK_ID}p" chromosomes.txt) ### list of chromosome
 
 ### If you have multiple bam per samples due to multiple libraries, merge them into one bam per sample before this step.
 
-### ploidymap is a list that keeps the same order of samples in list.txt and should use the sample ID names you set in script 05, and for each
+### ploidymap is a list that keeps the same order of samples in list.txt and should use the sample ID names you set in script 05.
 
-### sample ID name has the ploidy -- for a diploid species just create a tab separated file with 2 columns (first column: sample ID name set in script 05, second columnd: 2)
+### For each sample ID name has the ploidy -- for a diploid species just create a tab separated file with 2 columns (first column: sample ID name set in script 05, second columnd: 2)
+
+
 bcftools mpileup -Ou -f Betula_pendula_subsp._pendula.fa --bam-list list.txt -q 5 -r $CHROM -I -a FMT/AD | bcftools call -S ploidymap.txt -G - -f GQ -mv -Ov > $CHROM\.vcf
