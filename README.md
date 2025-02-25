@@ -4,6 +4,10 @@
 This is a simple SNP calling pipeline, implemented for SLURM job scheduler.
 Simply run the scripts one by one in their order.
 
+Files needed: 
+Paired end fastq files
+Reference genome in FASTA format
+
 NOTES:
 
 The system requirements requested for each job (CPUs, RAM and run time) should be changed according to your data: size of your raw fastq, size of reference etc.
