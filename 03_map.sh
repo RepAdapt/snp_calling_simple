@@ -9,7 +9,7 @@
 #### All these lists below need to follow same order
 INPUT1=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### List of trimmed R1 fastq reads (produced with script 01)
 INPUT2=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ###  List of trimmed R2 fastq reads (produced with script 01)
-OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt) ### List of output names -- just extract the meaningful part of the name from the reads names. There is a single output file for each pair of reads (each sample or library), so remove R1/R2 from the output names
+OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt) ### List of output names -- just extract the meaningful part of the name from the trimmed reads names. There is a single output file for each pair of reads (each sample or library), so remove R1/R2 from the output names
 
 module load bwa samtools
 
