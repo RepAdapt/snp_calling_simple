@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=0-0:23
+#SBATCH --time=0-0:59
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1G
 #SBATCH --account=def-yeaman
