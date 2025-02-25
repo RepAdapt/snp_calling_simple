@@ -10,7 +10,8 @@ Reference genome in FASTA format
 
 NOTES:
 
-The system requirements requested for each job (CPUs, RAM and run time) should be changed according to your data: size of your raw fastq, size of reference etc.
+The system requirements requested for each script (CPUs, RAM and run time) should be changed according to your data: size of your raw fastq, size of reference etc. The ones provided are an indication and probably an overkill in some steps.
+Indel realignment needs a bit more RAM than the rest of the scripts.
 
 The pipeline uses as example a B. platyphylla dataset, which had 83 samples -- hence why the job arrays in the various script are of size 83.
 
