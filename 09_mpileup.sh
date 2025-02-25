@@ -13,6 +13,6 @@ module load bcftools/1.11
 CHROM=$(sed -n "${SLURM_ARRAY_TASK_ID}p" chromosomes.txt) ### list of chromosomes. This species has 14, that s why array number is 14. We parallelize by crhomosome
 
 
-### here we call SNPs. list.txt is a list of ALL the realigned bam files of ALL samples. ploidymap is a list that keeps the same order of samples in list.txt, and for each
-### sample name has the ploidy -- for a diploid species just create tab separate file with 2 columns (first column: sample name, second columnd: 2)
+### here we call SNPs. list.txt is a list of ALL the realigned bam files of ALL samples. if you have multiple bam per samples due to multiple libraries, merge them into one before this step. ploidymap is a list that keeps the same order of samples in list.txt and should use the sample ID names you set in script 5, and for each
+### sample ID name has the ploidy -- for a diploid species just create a tab separated file with 2 columns (first column: sample ID name set in script 5, second columnd: 2)
 bcftools mpileup -Ou -f Betula_pendula_subsp._pendula.fa --bam-list list.txt -q 5 -r $CHROM -I -a FMT/AD | bcftools call -S ploidymap.txt -G - -f GQ -mv -Ov > $CHROM\.vcf
