@@ -15,6 +15,6 @@ OUTPUT2=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list4.txt) ### A list of R2 output na
 
 module load fastp
 
-### Trimming --  for each sample pair of raw fastq reads, we produce a pair of trimmed output files. Remember to keep R1 and R2 in the output names created in lists 3 and 4 above
+### Trimming --  for each sample pair of raw fastq reads or for each library, we produce a pair of trimmed output files. Remember to keep R1 and R2 in the output names created in lists 3 and 4 above
 
 fastp -w  4 -i $INPUT1 -I $INPUT2 -o $OUTPUT1\_trimmed.fastq.gz -O $OUTPUT2\_trimmed.fastq.gz
