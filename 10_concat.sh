@@ -8,8 +8,9 @@
 
 module load bcftools
 
-### concatenate all the chromsome vcfs produced in script 09. list.txt is a list of the 14 (in this case) vcfs produced in 09.
-### here we concatenate them in a single vcf
+### Concatenate all the chromsome vcfs produced in script 09. 
+### list.txt is a list of the 14 (in this case) vcfs produced in script 09.
+### Here we concatenate them in a single vcf
 
 bcftools concat -f list.txt -Oz > bplaty.vcf.gz
 tabix -p vcf bplaty.vcf.gz
