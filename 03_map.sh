@@ -8,13 +8,13 @@
 
 #### All these lists below need to follow same order
 INPUT1=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### List of trimmed R1 fastq reads (produced with script 01)
-INPUT2=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ###  List of trimmed R2 fastq reads (produced with script 01)
-OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt) ### List of output names -- just extract the meaningful part of the name from the trimmed reads names. There is a single output file for each pair of reads (each sample or library), so remove R1/R2 from the output names
+INPUT2=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ### List of trimmed R2 fastq reads (produced with script 01)
+OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt) ### List of output names -- extract the meaningful part of the name from the trimmed reads names. There is a single output file for each pair of reads (each sample or library)
 
 module load bwa samtools
 
-#### Here we map the trimmed reads to the ref genome and we produce a sam, then we sort it, convert it to bam and finally we index it
-#### We end up with 1 bam file per sample after this. If you had multiple libraries per sample, you d end up with 1 bam per library
+#### Here we map the trimmed reads to the ref genome and we produce a sam, then we convert it to bam, we sort it and finally we index it
+#### We end up with 1 bam file per sample after this. If you had multiple libraries per sample, you'd end up with 1 bam per library
 
 
 bwa mem -t 4 Betula_pendula_subsp._pendula.fa $INPUT1 $INPUT2  > ./bwa_output/$OUTPUT\.sam
