@@ -20,7 +20,7 @@ module load nixpkgs/16.09
 module load java gatk/3.8
 
 #### Here we generate a indel realigned bam file for each sample/library
-# Realign
+
 java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T RealignerTargetCreator -R Betula_pendula_subsp._pendula.fa -I $INPUT -o $OUTPUT\.intervals
 
 java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T IndelRealigner -R Betula_pendula_subsp._pendula.fa -I $INPUT -targetIntervals $OUTPUT\.intervals --consensusDeterminationModel USE_READS  -o $OUTPUT\_realigned.bam
