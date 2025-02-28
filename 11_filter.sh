@@ -10,16 +10,13 @@ module load vcftools bcftools
 module load StdEnv/2020 intel/2020.1.217 tabix/0.2.6
 
 
-########### TO BE UPDATED with chosen filtering criteria ###########
-### Filter the final VCF produced in script 10 
-#################### This filtering is just an example, they are not the chosen criteria -- to be updated ###########
+########### Only filtering the VCF to exclude sites with QUAL < 30 ###########
 
 
-bcftools filter -e 'MQ < 30' bplaty.vcf.gz -Oz > tmp.vcf.gz
+bcftools filter -e 'MQ < 30' bplaty.vcf.gz -Ov > bplaty_filtered.vcf
 
-vcftools --gzvcf tmp.vcf.gz --max-missing 0.7 --minQ 30 --minGQ 20 --minDP 5 --max-alleles 2 --recode --recode-INFO-all --stdout > bplaty_filtered.vcf
-
-rm tmp.vcf.gz
+### As an alternative to the bcftools command above, vcftools can also be used to filter by QUAL:
+### vcftools --gzvcf bplaty.vcf.gz --minQ 30 --recode --recode-INFO-all --stdout > bplaty_filtered.vcf
 
 
 bgzip bplaty_filtered.vcf
