@@ -4,6 +4,9 @@
 This is a simple SNP calling pipeline, implemented for SLURM job scheduler.
 Simply run the scripts one by one in their order.
 
+Software and tools versions to be used:
+
+
 Files needed: 
 
 - Paired end fastq files
