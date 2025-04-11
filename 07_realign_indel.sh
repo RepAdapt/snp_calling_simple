@@ -10,7 +10,7 @@
 INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### list of bam files with read groups (output of script 05)
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)  ### list of output names (just remove .bam suffix from input list)
 
-module load StdEnv/2020 samtools/1.12
+module load StdEnv/2020 samtools
 
 samtools index $INPUT
 
