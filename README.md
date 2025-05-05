@@ -3,16 +3,25 @@
 This is a simple SNP calling pipeline, implemented for SLURM job scheduler.
 Simply run the scripts one by one in their order.
 
-Software/tools versions: [https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.md](https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.imagelocations.md)
+# Software
 
-fastp (v.0.20.1)
-bwa-mem (v.0.7.17-r1188)
-samtools (v.1.16.1)
-Picard Tools (v.2.26.3)
+Software/tools versions available at: [https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.md](https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.imagelocations.md)
+
+fastp v.0.20.1
+
+bwa-mem v.0.7.17-r1188
+
+samtools v.1.16.1
+
+Picard Tools v.2.26.3
+
 GATK v.3.8
+
 bcftools v. 1.16
+
 vcftools 0.1.16
-BEDtools (v.2.27.1)
+
+BEDtools v.2.27.1
 
 
 
