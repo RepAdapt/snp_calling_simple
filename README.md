@@ -24,8 +24,7 @@ vcftools 0.1.16
 BEDtools v.2.27.1
 
 
-
-Files needed: 
+# Files needed: 
 
 - Paired end fastq files
 
