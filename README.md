@@ -4,7 +4,7 @@
 This is a simple SNP calling pipeline, implemented for SLURM job scheduler.
 Simply run the scripts one by one in their order.
 
-Software/tools versions: https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.md
+Software/tools versions: [https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.md](https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.imagelocations.md)
 
 
 Files needed: 
