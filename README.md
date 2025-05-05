@@ -5,7 +5,7 @@ Simply run the scripts one by one in their order.
 
 # Software
 
-Software/tools versions available at: [https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.md](https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.imagelocations.md)
+Software/tools versions available at: https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.imagelocations.md
 
 fastp v.0.20.1
 
