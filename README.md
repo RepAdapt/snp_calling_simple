@@ -1,5 +1,4 @@
-# SNP_calling_pipeline_slurm_mpilesup
-
+# SNP_calling_simple
 
 This is a simple SNP calling pipeline, implemented for SLURM job scheduler.
 Simply run the scripts one by one in their order.
