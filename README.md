@@ -5,7 +5,7 @@ Simply run the scripts one by one in their order.
 
 # Software
 
-Software/tools versions available at: https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.imagelocations.md
+Software/tools versions:
 
 fastp v.0.20.1
 
@@ -23,6 +23,7 @@ vcftools 0.1.16
 
 BEDtools v.2.27.1
 
+Singularity/Apptainer images available at: https://github.com/RepAdapt/singularity/blob/main/RepAdaptSingularity.imagelocations.md
 
 # Files needed: 
 
