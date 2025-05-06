@@ -5,8 +5,6 @@ Simply run the scripts one by one in their order.
 
 # Software
 
-Software/tools versions:
-
 fastp v.0.20.1
 
 bwa-mem v.0.7.17-r1188
