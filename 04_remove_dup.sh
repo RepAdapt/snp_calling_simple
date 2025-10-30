@@ -10,6 +10,7 @@
 INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### list of input bam files (output of script 03)
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ### list of output names --  I usually just remove the suffix (.bam) to extract the name from the input, and then the command below will add _dedup.bam 
 
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF PICARD IN YOUR MACHINE/SERVER  = Picard Tools v.2.26.3
 module load picard java
 
 
