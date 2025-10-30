@@ -6,6 +6,8 @@
 #SBATCH --time=00-23:00:00
 #SBATCH --account=def-yeaman
 
+
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF BCFTOOLS and VCFTOOLS IN YOUR MACHINE/SERVER  = bcftools v. 1.16   vcftools 0.1.16
 module load vcftools bcftools
 module load StdEnv/2020 intel/2020.1.217 tabix/0.2.6
 
