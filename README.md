@@ -5,8 +5,7 @@ Simply run the scripts one by one in their order.
 
 # Software
 # IMPORTANT!!! 
-# MAKE SURE YOU LOAD THE FOLLOWING SOFTWARE VERSION IN YOUR MACHINE. 
-# IF UNAVAILAIBLE, USE THE SINGULARITY/APPTAINER IMAGES PROVIDED (LINK BELOW)
+# Make sure you load the following software version on your machine. If unavailable, use the Singularity/Apptainer images provided (link below).
 
 fastp v.0.20.1
 
