@@ -7,6 +7,7 @@
 ### Here we just create the bwa index of the reference genome, needed for mapping
 ### Keep the output of this command in the same dir where you keep the reference genome fasta
 
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF BWA IN YOUR MACHINE/SERVER  = bwa-mem v.0.7.17-r1188
 module load bwa 
 
 
