@@ -11,6 +11,7 @@ INPUT1=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### List of trimmed R1 fast
 INPUT2=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt) ### List of trimmed R2 fastq reads (produced with script 01)
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list3.txt) ### List of output names -- extract the meaningful part of the name from the trimmed reads names. There is a single output file for each pair of reads (each sample or library)
 
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF BWA IN YOUR MACHINE/SERVER  = bwa-mem v.0.7.17-r1188
 module load bwa samtools
 
 #### Here we map the trimmed reads to the ref genome and we produce a sam, then we convert it to bam, we sort it and finally we index it
