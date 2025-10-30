@@ -7,12 +7,15 @@
 ### This is to create gatk index of ref genome needed for indel realignment
 ### Keep the output files of this command in the same dir where you keep the reference genome fasta
 
+
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF SAMTOOLS IN YOUR MACHINE/SERVER  = samtools v.1.16.1
 module load StdEnv/2020 samtools
 
 samtools faidx Betula_pendula_subsp._pendula.fa
 
 
 module purge
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF PICARD IN YOUR MACHINE/SERVER  = Picard Tools v.2.26.3
 module load picard java
 
 
