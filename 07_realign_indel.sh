@@ -10,6 +10,7 @@
 INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt) ### list of bam files with read groups (output of script 05)
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)  ### list of output names (just remove .bam suffix from input list)
 
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF SAMTOOLS IN YOUR MACHINE/SERVER  = samtools v.1.16.1
 module load StdEnv/2020 samtools
 
 samtools index $INPUT
@@ -17,6 +18,7 @@ samtools index $INPUT
 
 module purge
 module load nixpkgs/16.09
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF GATK IN YOUR MACHINE/SERVER  = GATK v.3.8
 module load java gatk/3.8
 
 #### Here we generate a indel realigned bam file for each sample/library
