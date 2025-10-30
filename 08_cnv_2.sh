@@ -12,8 +12,10 @@
 
 
 # Load needed modules
+###### CHANGE THE LINES OF CODE BELOW TO LOAD THE CORRECT VERSION OF SAMTOOLS and BEDTOOLS IN YOUR MACHINE/SERVER  = samtools v.1.16.1   BEDtools v.2.27.1
 module load samtools
 module load bedtools
+
 ### Keep the lists below with the same order
 INPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list1.txt)  ### list of realigned bam files
 OUTPUT=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list2.txt)  ### list of output names (just extract from input names removing bam suffix)
