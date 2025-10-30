@@ -4,6 +4,7 @@ This is a simple SNP calling pipeline, implemented for SLURM job scheduler.
 Simply run the scripts one by one in their order.
 
 # Software
+# IMPORTANT!!! MAKE SURE YOU LOAD THE FOLLOWING SOFTWARE VERSION IN YOUR MACHINE. IF UNAVAILAIBLE, USE THE SINGULARITY/APPTAINER IMAGES PROVIDED BY TONY (LINK BELOW) #
 
 fastp v.0.20.1
 
