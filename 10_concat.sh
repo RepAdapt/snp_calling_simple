@@ -6,6 +6,7 @@
 #SBATCH --time=06-00:00:00
 #SBATCH --account=def-yeaman
 
+###### CHANGE THE LINE OF CODE BELOW TO LOAD THE CORRECT VERSION OF BCFTOOLS IN YOUR MACHINE/SERVER  = bcftools v. 1.16
 module load bcftools
 
 ### Concatenate all the chromsome vcfs produced in script 09. 
